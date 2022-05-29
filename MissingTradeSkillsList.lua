@@ -25,7 +25,7 @@ MTSLDATA = {
 MTSLADDON = {
 	AUTHOR = "Thumbkin",
 	NAME = "MissingTradeSkillsList",
-	VERSION = "0.90",
+	VERSION = "TWoW_0.0.0",
 }
 
 -- Holds all info about variables used in this addon

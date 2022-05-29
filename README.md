@@ -1,5 +1,5 @@
 # MissingTradeSkillsList
-Addon For World Of Warcraft v1.12<br />
+Addon For Turtle World Of Warcraft v1.16<br />
 Shows the missing recipes/skills for a tradeskill and where to get them
 
 Supported TradeSkills: All but enchanting!<br />
@@ -26,6 +26,7 @@ Beware: Not all trainer skills have the correct minimum skill required or price
 10: Selected skill is gone when scrolling
 
 ## Version History
+vTWoW_0.0.0: fixes
 v0.23: 	Added all skills for professions but Enchanting<br />
 v0.22: 	Added 50 tailoring skills<br />
 v0.21: 	Added all mining skills<br />

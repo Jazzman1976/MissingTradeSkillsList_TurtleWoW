@@ -2777,6 +2777,21 @@ MTSLDATA["npcs"] = {
 		},
 		reacts = "Alliance",
 	},
+    {
+        id = 3315,
+        name = "Billibub Cogspinner",
+        zone = "Stormwind",
+        location = {
+            x = "62.30",
+            y = "30.20"
+        },
+        xp_level = {
+            min = "30",
+            max = "30",
+            is_elite = 0,
+        },
+        reacts = "Alliance"
+    },
 	{
 		id = 3333,
 		name = "Shankys",

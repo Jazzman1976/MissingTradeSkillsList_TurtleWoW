@@ -306,6 +306,15 @@ MTSLDATA["Engineering"]["items"] = {
 			sources = { 2682, 3495 },
 		},
 	},
+    {
+        id = 15274,
+        name = "Schematic: Portable Wormhole Generator — Stormwind",
+        qualoty = "common",
+        vendors = {
+            price = 1000,
+            sources = { 3315 },
+        }
+    },
 	{
 		id = 16043,
 		name = "Schematic: Thorium Rifle",

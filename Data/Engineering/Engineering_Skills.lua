@@ -560,6 +560,12 @@ MTSLDATA["Engineering"]["skills"] = {
 		},
 	},
 	{
+		id = 20627,
+		name = "Portable Wormhole Generator: Stormwind",
+		min_skill = 130,
+		item = 15274,
+	},
+	{
 		id = 3949,
 		name = "Silver-plated Shotgun",
 		min_skill = 130,
