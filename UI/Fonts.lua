@@ -8,9 +8,9 @@ MTSLUI_Fonts = {
 	name = "Fonts\\FRIZQT__.TTF",
 	-- Fontsize of text
 	size = {
-		large = 13,
-		normal = 11,	
-		small = 10,
+		large = 12, --13,
+		normal = 10, --11,
+		small = 8, --10,
 	},
 	-- Colors available
 	colors = {

@@ -5,13 +5,13 @@
 
 MTSLUI_Core = {
 	-- Addon frame
-	FRAME_WIDTH_MTSL = 825,
+	FRAME_WIDTH_MTSL = 675, --825,
 	FRAME_HEIGHT_MTSL = 429,
 	-- SUBFRAME of the split (= width of main frame - 10 for borders)
-	FRAME_WIDTH_SUBFRAME = 815,
+	FRAME_WIDTH_SUBFRAME = 665, --815,
 	-- Widths of the splitframes (300/450)
 	FRAME_WIDTH_LEFTFRAME = 305,
-	FRAME_WIDTH_RIGHTFRAME = 512,
+	FRAME_WIDTH_RIGHTFRAME = 362, --512,
 	-- Height of the detail frame when its using all the space
 	FRAME_HEIGHT_DETAILFRAME = 240,
 	-- Height of the detail frame when using split (so 2 detail frames shown)
@@ -115,16 +115,20 @@ MTSLUI_Core = {
 
 	CreateToggleButtonAndCraftFrame = function(self)
 		self.TOGGLE_BUTTON_CRAFTSKILL = MTSL_Tools:CopyObject(MTSLUI_ToggleButton)
-		self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+		--self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+		self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
 		self.MTSLF_CRAFTSKILL = MTSL_Tools:CopyObject(MTSLUI_MissingTradeSkillsListFrame)
-		self.MTSLF_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+		--self.MTSLF_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+		self.MTSLF_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
 	end,
 	
 	CreateToggleButtonAndTradeSkillFrame = function(self)
 		self.TOGGLE_BUTTON_TRADESKILL = MTSL_Tools:CopyObject(MTSLUI_ToggleButton)
-		self.TOGGLE_BUTTON_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+		--self.TOGGLE_BUTTON_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+		self.TOGGLE_BUTTON_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
 		self.MTSLF_TRADESKILL = MTSL_Tools:CopyObject(MTSLUI_MissingTradeSkillsListFrame)
-		self.MTSLF_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+		--self.MTSLF_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+		self.MTSLF_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
 	end,
 
 	---------------------------------------------------------------------------------------
