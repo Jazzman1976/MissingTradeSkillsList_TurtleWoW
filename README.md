@@ -9,6 +9,11 @@ Beware: Not all trainer skills have the correct minimum skill required or price
 ![MTSL for First Aid](https://i.imgur.com/UEn9CId.png)
 ![MTSL for Alchemy](https://i.imgur.com/jacvhFN.png)
 
+## TurtleWoW Changes to the original MissingTradeSkillList
+* AdvancedTradeSkillWindow Addon Support
+* Engineering
+    * Portable Wormhole Generator : Stormwind
+
 ## Known Bugs
 7: ToggleButton does not correctly move when viewing or hiding tradeskillframe & craftframe at same time<br />
 8: Error when opening a CraftWindow before a TradeSkillFrame<br />
@@ -26,7 +31,7 @@ Beware: Not all trainer skills have the correct minimum skill required or price
 10: Selected skill is gone when scrolling
 
 ## Version History
-vTWoW_0.0.0: fixes
+vTWoW_0.0.0: fixes  
 v0.23: 	Added all skills for professions but Enchanting<br />
 v0.22: 	Added 50 tailoring skills<br />
 v0.21: 	Added all mining skills<br />
