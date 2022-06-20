@@ -3,14 +3,37 @@
 -- Description: Contains everything about custom fonts	--
 ----------------------------------------------------------
 
+---------------------------------------------------------
+-- Get values depending on ATSW Addon is installed or not
+---------------------------------------------------------
+function GetFontSizeLarge()
+	local s = 13
+	if ATSWFrame ~= nil then s = 12 end
+	return s
+end
+function GetFontSizeNormal()
+	local s = 11
+	if ATSWFrame ~= nil then s = 10 end
+	return s
+end
+function GetFontSizeSmall()
+	local s = 10
+	if ATSWFrame ~= nil then s = 8 end
+	return s
+end
+
+---------------------------------------------------------
+-- Fonts object
+---------------------------------------------------------
+
 MTSLUI_Fonts = {
 	-- Type of font used
 	name = "Fonts\\FRIZQT__.TTF",
 	-- Fontsize of text
 	size = {
-		large = 13,
-		normal = 11,	
-		small = 10,
+		large = GetFontSizeLarge(),
+		normal = GetFontSizeNormal(),
+		small = GetFontSizeSmall(),
 	},
 	-- Colors available
 	colors = {
