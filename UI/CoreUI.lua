@@ -1,17 +1,39 @@
 ---------------------------------------------------
--- Name: CoreUI									 --
--- Description: Contains all core UI functions --
+-- Name: CoreUI								     --
+-- Description: Contains all core UI functions   --
 ---------------------------------------------------
 
+---------------------------------------------------------
+-- Get values depending on ATSW Addon is installed or not
+---------------------------------------------------------
+function GetWidthMTSL()
+	local w = 825
+	if ATSWFrame ~= nil then w = 675 end
+	return w
+end
+function GetWidthSubframe()
+	local w = 815
+	if ATSWFrame ~= nil then w = 665 end
+	return w
+end
+function GetWidthRightframe()
+	local w = 512
+	if ATSWFrame ~= nil then w = 362 end
+	return w
+end
+
+--------------------------------------------------------------------------
+-- Core object
+--------------------------------------------------------------------------
 MTSLUI_Core = {
 	-- Addon frame
-	FRAME_WIDTH_MTSL = 675, --825,
+	FRAME_WIDTH_MTSL = GetWidthMTSL(),
 	FRAME_HEIGHT_MTSL = 429,
 	-- SUBFRAME of the split (= width of main frame - 10 for borders)
-	FRAME_WIDTH_SUBFRAME = 665, --815,
+	FRAME_WIDTH_SUBFRAME = GetWidthSubframe(),
 	-- Widths of the splitframes (300/450)
 	FRAME_WIDTH_LEFTFRAME = 305,
-	FRAME_WIDTH_RIGHTFRAME = 362, --512,
+	FRAME_WIDTH_RIGHTFRAME = GetWidthRightframe(),
 	-- Height of the detail frame when its using all the space
 	FRAME_HEIGHT_DETAILFRAME = 240,
 	-- Height of the detail frame when using split (so 2 detail frames shown)
@@ -124,11 +146,15 @@ MTSLUI_Core = {
 	
 	CreateToggleButtonAndTradeSkillFrame = function(self)
 		self.TOGGLE_BUTTON_TRADESKILL = MTSL_Tools:CopyObject(MTSLUI_ToggleButton)
-		--self.TOGGLE_BUTTON_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
-		self.TOGGLE_BUTTON_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
 		self.MTSLF_TRADESKILL = MTSL_Tools:CopyObject(MTSLUI_MissingTradeSkillsListFrame)
-		--self.MTSLF_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
-		self.MTSLF_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
+		if ATSWFrame ~= nil then
+			self.TOGGLE_BUTTON_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
+			self.MTSLF_TRADESKILL:Initialise(ATSWFrame, "TradeSkill")
+		else
+			self.TOGGLE_BUTTON_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+			self.MTSLF_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
+		end
+		
 	end,
 
 	---------------------------------------------------------------------------------------
