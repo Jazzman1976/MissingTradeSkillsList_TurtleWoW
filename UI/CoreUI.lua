@@ -137,11 +137,14 @@ MTSLUI_Core = {
 
 	CreateToggleButtonAndCraftFrame = function(self)
 		self.TOGGLE_BUTTON_CRAFTSKILL = MTSL_Tools:CopyObject(MTSLUI_ToggleButton)
-		--self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
-		self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
 		self.MTSLF_CRAFTSKILL = MTSL_Tools:CopyObject(MTSLUI_MissingTradeSkillsListFrame)
-		--self.MTSLF_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
-		self.MTSLF_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
+		if ATSWFrame ~= nil then
+			self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
+			self.MTSLF_CRAFTSKILL:Initialise(ATSWFrame, "CraftSkill")
+		else
+			self.TOGGLE_BUTTON_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+			self.MTSLF_CRAFTSKILL:Initialise(CraftFrame, "CraftSkill")
+		end
 	end,
 	
 	CreateToggleButtonAndTradeSkillFrame = function(self)
@@ -153,8 +156,7 @@ MTSLUI_Core = {
 		else
 			self.TOGGLE_BUTTON_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
 			self.MTSLF_TRADESKILL:Initialise(TradeSkillFrame, "TradeSkill")
-		end
-		
+		end		
 	end,
 
 	---------------------------------------------------------------------------------------
