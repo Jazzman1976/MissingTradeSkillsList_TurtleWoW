@@ -21,15 +21,6 @@ MTSLDATA["Enchanting"]["skills"] = {
 		},
 	},
 	{
-		id = 13642,
-		name = "Enchant Bracer - Spirit",
-		min_skill = 0,
-		trainers = {
-			price = 0,
-			sources = { 11072, 11073, 11074 },
-		},
-	},
-	{
 		id = 13905,
 		name = "Enchant Shield - Greater Spirit",
 		min_skill = 0,
@@ -431,6 +422,15 @@ MTSLDATA["Enchanting"]["skills"] = {
 		min_skill = 160,
 		trainers = {
 			price = 2800,
+			sources = { 11072, 11073, 11074 },
+		},
+	},
+	{
+		id = 13642,
+		name = "Enchant Bracer - Spirit",
+		min_skill = 165,
+		trainers = {
+			price = 0,
 			sources = { 11072, 11073, 11074 },
 		},
 	},
